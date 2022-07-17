@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MemoApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <!-- 以下のリンクをlink_toメソッドを用いて変更してください -->
+        <%= link_to("MemoApp", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <!-- 以下のリンクをlink_toメソッドを用いて変更してください -->
+          <%= link_to("MemoAppとは", "/about") %>
+        </li>
+        <li>
+          <!-- ここにlink_toメソッドを用いて投稿一覧ページへのリンクを作成してください -->
+          <%= link_to("メモ一覧", "/posts/index") %>
+        </li>
+        <li>
+          <!-- ここに新規投稿ページへのリンクを追加してください -->
+          <%= link_to("メモ投稿", "/posts/new") %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>
